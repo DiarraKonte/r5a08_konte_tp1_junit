@@ -16,7 +16,7 @@ public class UserGreatingTest {
         Exception exception = assertThrows(UserGreatingFailureException.class, () -> {
             UserGreating.formatGreeting(null);
         });
-        assertEquals("Le nom ne peut pas être null", exception.getMessage());
+        assertEquals("Le nom ne peut pas etre null", exception.getMessage());
     }
 
     @Test
@@ -24,7 +24,7 @@ public class UserGreatingTest {
         Exception exception = assertThrows(UserGreatingFailureException.class, () -> {
             UserGreating.formatGreeting("");
         });
-        assertEquals("Le nom ne peut pas être vide", exception.getMessage());
+        assertEquals("Le nom ne peut pas etre vide", exception.getMessage());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class UserGreatingTest {
         Exception exception = assertThrows(UserGreatingFailureException.class, () -> {
             UserGreating.formatGreeting("DiarraKonteBUT3");
         });
-        assertEquals("Le nom ne doit pas dépasser 10 caractères", exception.getMessage());
+        assertEquals("Le nom ne doit pas depasser 10 caracteres", exception.getMessage());
     }
 
     @Test
@@ -40,7 +40,7 @@ public class UserGreatingTest {
         Exception exception = assertThrows(UserGreatingFailureException.class, () -> {
             UserGreating.formatGreeting("Diarra-Konte");
         });
-        assertEquals("Le nom ne doit pas contenir d'espaces ou de caractères spéciaux", exception.getMessage());
+        assertEquals("Le nom ne doit pas contenir d'espaces ou de caracteres speciaux", exception.getMessage());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class UserGreatingTest {
         Exception exception = assertThrows(UserGreatingFailureException.class, () -> {
             UserGreating.formatGreeting("Diarra Konte");
         });
-        assertEquals("Le nom ne doit pas contenir d'espaces ou de caractères spéciaux", exception.getMessage());
+        assertEquals("Le nom ne doit pas contenir d'espaces ou de caracteres speciaux", exception.getMessage());
     }
 }
 
